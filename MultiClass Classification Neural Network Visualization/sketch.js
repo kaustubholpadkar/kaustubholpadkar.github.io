@@ -37,7 +37,7 @@ function draw () {
 
 	plot()
   plotData()
-  // intro()
+  intro()
 }
 
 function train () {
