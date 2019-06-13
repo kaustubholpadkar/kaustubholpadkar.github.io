@@ -80,46 +80,13 @@ function draw() {
       pipes[i].show();
       pipes[i].update();
 
-      // if (pipes[i].hits(bird)) {
-      //   console.log("HIT");
-      // }
-
       if (pipes[i].offscreen()) {
         pipes.splice(i, 1);
-        // pipes.push(new Pipe());
       }
     }
   }
   frameCount--;
   text('generation ' + generationCount, 10, 50);
-
-  // remove below
-  // for (var i = pipes.length-1; i >= 0; i--) {
-  //   pipes[i].show();
-  //   pipes[i].update();
-  //
-  //   if (pipes[i].hits(bird)) {
-  //     console.log("HIT");
-  //   }
-  //
-  //   if (pipes[i].offscreen()) {
-  //     pipes.splice(i, 1);
-  //   }
-  // }
-  //
-  // bird.update();
-  // bird.show();
-  //
-  // if (frameCount % 50 == 0) {
-  //   pipes.push(new Pipe());
-  // }
-}
-
-function keyPressed() {
-  if (key == ' ') {
-    bird.up();
-    //console.log("SPACE");
-  }
 }
 
 function createDOM() {
@@ -135,8 +102,6 @@ function showBG() {
 
   x1 -= scrollSpeed;
   x2 -= scrollSpeed;
-
-  console.log(x1, x2);
 
   if (x1 < -width){
     x1 = width-2;

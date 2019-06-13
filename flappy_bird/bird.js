@@ -22,7 +22,6 @@ function Bird(brain) {
   }
   
   this.show = function() {
-    // console.log(this.fitness)
     push();
     // fill(255);
     // ellipse(this.x, this.y, 32, 32);
@@ -83,9 +82,7 @@ function Bird(brain) {
       map(pipe.bottom, 0, height, 0, 1),
       this.velocity / 10.
     ];
-    // console.log(inputs)
     const output = this.brain.predict(inputs);
-    // console.log(output)
 
     if (output[0] >= 0.5) {
       this.up();
